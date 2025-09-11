@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShipDecKK-AboutUs</title>
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+    <header>
+        <a href="main.html" class="logo">ShipDecKK</a>
+        <nav class="navbar">
+        <a href="./main.html">Home</a>
+        <a href="./gallery.html">Gallery</a>
+        <a href="./services.html">Services</a>
+        <a href="about.html">About Us</a>
+        <a href="./subcription.html">Subscription </a>
+        </nav>
+    </header>
+
+    <section id="about-us">
+        <div class="about-container">
+        <!-- Introduction -->
+        <div class="about-section active" id="introduction">
+            <h2>About Us</h2>
+            <p>
+            Established in 2020, ShipDecKK is a leading maritime solutions provider dedicated to delivering exceptional services for ship enthusiasts and professionals alike. Our mission is to make shipping accessible, affordable, and enjoyable for everyone.
+            </p>
+        </div>
+
+        <!-- Mission & Values -->
+        <div class="about-section" id="mission-values">
+            <h2>Mission & Values</h2>
+            <p>
+            Our mission is to provide top-tier maritime services that exceed expectations. We are committed to quality, innovation, and customer satisfaction. Our values include integrity, reliability, and a passion for excellence.
+            </p>
+        </div>
+
+        <!-- Achievements -->
+        <div class="about-section" id="achievements">
+            <h2>Achievements</h2>
+            <p>
+            Over the years, we have successfully delivered thousands of ships worldwide, earning us recognition and trust from clients across the globe. Our commitment to excellence has been rewarded with numerous awards and accolades.
+            </p>
+        </div>
+        </div>
+
+        <!-- Arrow Buttons -->
+        <div class="arrow-buttons">
+        <button class="arrow left" onclick="prevSection()">&#8592;</button>
+        <button class="arrow right" onclick="nextSection()">&#8594;</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 <span class="footer-logo">ShipDeckKK</span>. All rights reserved.</p>
+    </footer>
+
+    <script>
+        let currentSection = 0;
+        const sections = document.querySelectorAll('.about-section');
+
+        function showSection(index) {
+        sections.forEach((section, i) => {
+            section.classList.toggle('active', i === index);
+        });
+        }
+
+        function nextSection() {
+        currentSection = (currentSection + 1) % sections.length;
+        showSection(currentSection);
+        }
+
+        function prevSection() {
+        currentSection = (currentSection - 1 + sections.length) % sections.length;
+        showSection(currentSection);
+        }
+    </script>
+</body>
+</html>
