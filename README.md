@@ -1,2 +1,2 @@
 # Human-and-Computer-Interaction
-Project membuath sebuat frontend mengenai perusahaan yang membuka penyewaan kapal
+Designed a user interface prototype for a ship rental business as part of Human Computer Interaction course. Improved project usability score and user testing feedback. Learned design thinking and frontend design with HTML/CSS.
